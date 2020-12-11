@@ -10,7 +10,7 @@
 ![General Architecture of the learning algorithm](https://user-images.githubusercontent.com/50799373/99905368-26fdd380-2caf-11eb-93d0-57b5450747af.png)
 ![Mathematical expression of the algorithm](https://user-images.githubusercontent.com/50799373/99905418-76440400-2caf-11eb-9614-69b2b26204ad.png)
 
-## 4 - Building the parts of our algorithm
+## Building the parts of our algorithm
 
 ### The main steps for building a Neural Network are:
 

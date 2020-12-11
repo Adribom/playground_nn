@@ -120,16 +120,7 @@ y_test_set = np.array(y_test_set).reshape(1, -1)
 save_training_data(X_train_set, y_train_set)
 save_test_data(X_test_set, y_test_set)
 
-
-
-
-
-    
-
-
-
-
-           
+       
 
 
 
