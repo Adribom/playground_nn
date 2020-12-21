@@ -1,6 +1,6 @@
 
 import numpy as np
-import HelperFunctions as hp
+import Neural_Math.HelperFunctions as hf
 
 
 def propagate(w, b, X, Y):
@@ -19,11 +19,12 @@ def propagate(w, b, X, Y):
     db -- gradient of the loss with respect to b, thus same shape as b
     """
 
-    m = X.shpe[1]
+    m = X.shape[1]
 
     # FORWARD PROPAGATION
-    A = hp.sigmoid(np.dot(w.T, X) + b) # Compute actcivation
-    cost = (-1/m) * np.sum(Y * np.log(A) + (1 - Y) * (np.log(1 - A))) #compute cost
+    A = hf.sigmoid(np.dot(w.T, X) + b) # Compute actcivation
+    cost = (- 1 / m) * np.sum(Y * np.log(A) + (1 - Y) * (np.log(1 - A))) #compute cost
+    
     
     # BACKWARD PROPAGATION
     dw = (1/m) * np.dot(X, (A - Y).T)

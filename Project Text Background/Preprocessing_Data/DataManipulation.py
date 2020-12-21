@@ -10,8 +10,8 @@ from numpy import asarray
 from matplotlib.colors import hsv_to_rgb
 
 #Compact variables of training data
-TRAINDATADIR = "G:\\Meu Drive\\Projects\\Project Text Background\\data\\train"
-TESTDATADIR = "G:\\Meu Drive\\Projects\\Project Text Background\\data\\test"
+TRAINDATADIR = "G:\\Meu Drive\\NN\\playground_nn\\Project Text Background\\Preprocessing_Data\\data\\train"
+TESTDATADIR = "G:\\Meu Drive\\NN\\playground_nn\\Project Text Background\\Preprocessing_Data\\data\\test"
 CATEGORIES = ["black", "white"]
 training_data = []
 test_data = []
@@ -25,10 +25,10 @@ y_test_set = []
 
 
 def create_training_data():
-    #Iterate throgh images directories (red, blue and green)
+    #Iterate throgh images directories (black amd white)
     for categorie in CATEGORIES:
         path = os.path.join(TRAINDATADIR, categorie)
-        class_num = CATEGORIES.index(categorie) #get index of list to not use "red", "blue" and "green"
+        class_num = CATEGORIES.index(categorie) #get index of list to not use "white" and "black"
         for img in os.listdir(path):
             #try because there might be data error
             try:
@@ -41,10 +41,10 @@ def create_training_data():
                 pass
 
 def create_test_data():
-    #Iterate throgh images directories (red, blue and green)
+    #Iterate throgh images directories (black and white)
     for categorie in CATEGORIES:
         path = os.path.join(TESTDATADIR, categorie)
-        class_num = CATEGORIES.index(categorie) #get index of list to not use "red", "blue" and "green"
+        class_num = CATEGORIES.index(categorie) #get index of list to not use "black" and "white"
         for img in os.listdir(path):
             #try because there might be data error
             try:
@@ -93,12 +93,12 @@ def save_test_data(X, y):
 
 create_training_data()
 create_test_data()
-print(len(training_data))
+#print(len(training_data))
 random.shuffle(test_data)
 random.shuffle(training_data)
     
-for sample in training_data[:10]:               #Check if data has Shuffled
-    print(sample[1])                                #in the first 10 itens
+#for sample in training_data[:10]:               #Check if data has Shuffled
+    #print(sample[1])                                #in the first 10 itens
 
 #Seperate the list by the features and labels
 for features, labels in training_data:
@@ -118,9 +118,7 @@ y_test_set = np.array(y_test_set).reshape(1, -1)
 
 
 save_training_data(X_train_set, y_train_set)
-save_test_data(X_test_set, y_test_set)
-
-       
+save_test_data(X_test_set, y_test_set) 
 
 
 

@@ -38,7 +38,7 @@ def relu(z):
     """
     A recent invention which stands for Rectified Linear Units. The formula is deceptively simple: max(0,z). Despite its name and appearance, it’s not linear and provides the same benefits as Sigmoid but with better performance.
     """
-    return max(0,z)
+    return np.clip(z, 0, z)
 
 def relu_prime(z):
     return 1 if z > 0 else 0

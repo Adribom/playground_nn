@@ -13,7 +13,7 @@ number = 31
 #blue = (140, size, 225)
 #red = (0, size, 225)
 
-
+'''
 for size in range(150, 250, 10):
     #color = (130, size, 220)
     color = (160, size, 150)
@@ -23,6 +23,4 @@ for size in range(150, 250, 10):
     #plt.show()
     plt.savefig('G:\\Meu Drive\\Projects\\Project Text Background\\data\\train\\blue\\' + str(number), bbox_inches='tight', pad_inches = 0)
     number += 1
-    
-    
-
+'''

@@ -9,10 +9,10 @@ from scipy import ndimage
 from numpy import asarray
 from matplotlib.colors import hsv_to_rgb
 
-X_train_set_orig = pickle.load(open('X_train_set.pickle', 'rb'))
-y_train_set = pickle.load(open('y_train_set.pickle', 'rb'))
-X_test_set_orig = pickle.load(open('X_test_set.pickle', 'rb'))
-y_test_set = pickle.load(open('y_test_set.pickle', 'rb'))
+X_train_set_orig = pickle.load(open('G:\\Meu Drive\\NN\\playground_nn\\Project Text Background\\Preprocessing_Data\\X_train_set.pickle', 'rb'))
+y_train_set = pickle.load(open('G:\\Meu Drive\\NN\\playground_nn\\Project Text Background\\Preprocessing_Data\\y_train_set.pickle', 'rb'))
+X_test_set_orig = pickle.load(open('G:\\Meu Drive\\NN\\playground_nn\\Project Text Background\\Preprocessing_Data\\X_test_set.pickle', 'rb'))
+y_test_set = pickle.load(open('G:\\Meu Drive\\NN\\playground_nn\\Project Text Background\\Preprocessing_Data\\y_test_set.pickle', 'rb'))
 
 m_train = y_train_set.shape[1]
 m_test = y_test_set.shape[1]

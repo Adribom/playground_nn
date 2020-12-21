@@ -1,8 +1,8 @@
 import numpy as np
-import Propagations
-import HelperFunctions as hf
+import Neural_Math.Propagations as props
+import Neural_Math.HelperFunctions as hf
 
-def optmize(w, b, X, Y, num_iterations, learning_rate, print_cost = False):
+def optmize(w, b, X, Y, num_iterations, learning_rate, print_cost = True):
     """
     This function optimizes w and b by running a gradient descent algorithm
     
@@ -30,7 +30,7 @@ def optmize(w, b, X, Y, num_iterations, learning_rate, print_cost = False):
 
     for i in range(num_iterations):
         #Cost and gradient calculation
-        grads, cost = Propagations.propagate(w, b, X, Y)
+        grads, cost = props.propagate(w, b, X, Y)
 
         # Retrieve derivatives from grads
         dw = grads["dw"]
